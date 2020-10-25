@@ -1,0 +1,57 @@
+body {
+    background-image: url("/img/taxi1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;     
+   }
+   
+   
+.bookingForm{
+    background-color: #222222;
+    width: 35%;
+    min-width: 400px;
+    min-height: 600px;
+    margin: 100px auto;
+    border-radius: 2%;
+    padding: 20px;
+}
+
+.bookingForm form .tr{
+    display: block;
+    margin-top: 20px;    
+}
+
+.bookingForm form input{
+    outline-style: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-left: 30px;
+    padding: 5px 0px;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Microsoft soft";
+    
+}
+
+.bookingForm form td{
+    color: #FFC809;
+    text-align: right;
+}
+
+.bookingForm form span{
+    display:inline-block;
+    width:150px;
+    text-align:right;
+}
+
+#confirm{
+    /* background-color: #fff; */
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+} 
+
+.bookingForm form .btn{
+    width: 100px;
+    margin-left: 33px;
+}

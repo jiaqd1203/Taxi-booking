@@ -1,0 +1,67 @@
+body{
+  background-image:url("/img/Taxi.JPG") ; 
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+#table{
+    background-color: #222222;
+    height: 40%;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 2%;
+    border: 2px solid yellow;
+}
+
+#table .adpage {    
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;   
+}
+
+#table img{
+    width: 250px;
+    height: 250px; 
+}
+
+#table .td1{
+    color: #FFC809;
+    font-size: 16px;
+    width: 180px;
+}
+
+#table .td2 input{
+    height: 25px;
+    width: 225px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    outline-style: none;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Microsoft soft";    
+}
+
+#table .td3 input{
+    width: 80px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Microsoft soft";
+    margin-left: 5px;
+}
+
+#table .assign{
+display: block;
+width: 500px;
+height: 20px;
+margin: 10 auto;
+
+}
+
+#table .request{
+    display: block;
+    width: 500px;
+    height: 20px;
+    margin: 10 auto;   
+}

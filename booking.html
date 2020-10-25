@@ -1,0 +1,103 @@
+<!DOCTYPE HTML> 
+<html>
+	<head>
+		<title>AUT taxi booking</title>
+		<script type="text/javascript" src="booking.js"></script>
+
+		<script>
+			setInterval(function(){ displayDateTime(); }, 1000);
+		</script>
+		<link rel="stylesheet" href="/reset.css" type="text/css">
+		<link rel="stylesheet" href="index.css" type="text/css">
+		<link rel="stylesheet" href="booking.css" type="text/css">
+	</head>
+<body>
+	
+	<div class="header" id="top">
+		<div class="wrap">
+			<div class="logo">
+				<a href="index.html"><img src="/img/logo.png" title="logo" /></a>
+			</div>
+			<div class="top-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="booking.html">Booking</a></li>
+					<li><a href="admin.html">Admin</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="bookingForm">
+	<form>
+	<table>
+	<tr class="tr">
+	<td><span>Customer Name</span></td>
+	<td><input type="text" name="cname" maxlength="100" title="Maxinum 100 letters" onblur="inputValidate('validation.php', 'checkName', cname.value)" placeholder="Enter your name here"></td>
+	<td><span id="checkName"></span></td>
+	</tr>
+	<tr class="tr">
+	<td ><span>Contact Phone</span></td>   
+	<td><input type="text" name="cphone" maxlength="25" title="Maxinum 25 numbers" onblur="inputValidate('validation.php', 'checkPhone', cphone.value)" placeholder="Enter your phone here"/></td>
+	<td><span id="checkPhone"></span></td>
+	</tr>
+	<tr class="tr">
+	<td ><strong><span>Pick-up Address</span></strong></td> 
+	<td></td>	
+	</tr>
+	<tr class="tr">
+	<td><span>Unit</span></td>   
+	<td><input type="text" name="upunit" maxlength="5" title="Maxinum 5 digits or letters" onblur="inputValidate('validation.php', 'checkPickupUnit', upunit.value)" placeholder="Enter your unit here" /></td>
+	<td><span id="checkPickupUnit"></span></td>
+	</tr>
+	<tr class="tr">
+	<td ><span>Street</span> </td>   
+	<td><input type="text" name="upstreet" maxlength="50" title="Maxinum 50 digits or letters" onblur="inputValidate('validation.php', 'checkPickupStreet', upstreet.value)" placeholder="Enter your street here"/></td>
+	<td><span id="checkPickupStreet"></span></td>
+	</tr>
+	<tr class="tr">
+	<td ><span>Suburb</span> </td>   
+	<td><input type="text" name="upsuburb" maxlength="20" title="Maxinum 20 letters" onblur="inputValidate('validation.php', 'checkPickupSuburb', upsuburb.value)" placeholder="Enter your suburb here"/></td>
+	<td><span id="checkPickupSuburb"></span></td>
+	</tr>
+	<tr class="tr">
+	<td ><span>Date & Time</span> </td>   
+	<td><input type="datetime-local" name="updatetime" title="After this time" id="localDateTime" onblur="inputValidate('validation.php', 'checkPickupDatetime', updatetime.value)" placeholder="Enter your date & time here"/></td>
+	<td><span id="checkPickupDatetime"></span></td>
+	</tr>
+	<tr class="tr">
+	<td ><strong><span>Drop-off Address</span></strong></td> 
+	<td></td>
+	</tr>
+	<tr class="tr">
+	<td ><span>Unit</span></td>   
+	<td><input type="text" name="offunit" maxlength="5" title="Maxinum 5 digits or letters" onblur="inputValidate('validation.php', 'checkDropoffUnit', offunit.value)" placeholder="Enter your unit here"/></td>
+	<td><span id="checkDropoffUnit"></span></td>
+	</tr>
+	<tr class="tr">
+	<td ><span>Street</span> </td>   
+	<td><input type="text" name="offstreet" maxlength="50" title="Maxinum 50 digits or letters" onblur="inputValidate('validation.php', 'checkDropoffStreet', offstreet.value)" placeholder="Enter your street here"/></td>
+	<td><span id="checkDropoffStreet"></span></td>
+	</tr>
+	<tr class="tr">
+	<td ><span>Suburb</span> </td>   
+	<td><input type="text" name="offsuburb" maxlength="20" title="Maxinum 20 letters" onblur="inputValidate('validation.php', 'checkDropoffSuburb', offsuburb.value)" placeholder="Enter your suburb here"/></td>
+	<td><span id="checkDropoffSuburb"></span></td>
+	</tr>
+	</table>
+	<br>
+	<table id="confirm">
+	<tr class="tr">
+	<td ><input class="btn" type="button" value="Submit" onclick="booking('booking.php','result', cname.value, cphone.value, upunit.value, upstreet.value, upsuburb.value, updatetime.value, offunit.value, offstreet.value, offsuburb.value)"/></td>
+	<td ><input class="btn" type="reset" value="Reset" onclick="cleanReuslt()"/></td>
+	</tr>
+	</table>
+	</form>	
+	<!--a href="index.htm">Return to Home Page</a-->
+	
+	<span id="result">
+		<pre></pre>
+	</span>
+</div>
+	
+</body>
+</html>
