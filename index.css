@@ -46,10 +46,9 @@ body{
 }
 
 #checkbox{
-    /* max-width:1800px;  */
+    width:1800px;
     position: relative;
     overflow: hidden;
-    width: 100%;
     height: 640px;
     margin: 0 auto;
 }
